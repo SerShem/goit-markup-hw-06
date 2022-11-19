@@ -93,13 +93,6 @@ a {
 }
 
 .titel-invisible {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-
 	white-space: nowrap;
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
@@ -877,6 +870,9 @@ a {
 	border-color: rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
 	outline: transparent;
+	transition-property: fill, border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
@@ -895,16 +891,19 @@ a {
 	position: absolute;
 	left: 15px;
 	bottom: 21px;
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-	.form-input:focus + .form-input-svg {
-		fill: var(--target-blue);
-	}
+.form-input:focus+.form-input-svg {
+	fill: var(--target-blue);
+}
 
 .backdrop-form-name {
 	position: relative;
-	 display: flex;
-	 flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .backdrop-form-fone {
@@ -919,11 +918,8 @@ a {
 	flex-direction: column;
 }
 
-.backdrop-form-coment {
-	
-}
 
-.backdrop-form-coment textarea {
+.backdrop-form-textarea {
 	margin-bottom: 20px;
 
 	width: 448px;
@@ -936,25 +932,60 @@ a {
 
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
+	outline: transparent;
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-form-textarea:focus {
+	border-color: var(--target-blue);
 }
 
 .backdrop-form-approval {
 	margin-bottom: 30px;
 
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 }
 
-.backdrop-form-approval input {
+.form-approval-input {
 	margin-right: 8px;
 }
 
-.form-approval-appruv {
+.form-approval-label {
 	margin-right: 5px;
 
 	color: var(--text-grey);
 	line-height: 24px;
+	display: flex;
+	align-items: center;
+}
+
+.form-approval-label span {
+	margin-right: 8px;
+	content: '';
+	width: 16px;
+	height: 15px;
+	border: 2px solid var(--color-zeroblak);
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	fill: transparent;
+	transition-property: fill, border-color, background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-approval-input:checked+.form-approval-label span {
+	background-color: var(--target-blue);
+	border-color: transparent;
+	fill: var(--color-maxwite);
+}
+
+.form-approval-input:focus+.form-approval-label span {
+	border-color: var(--target-blue);
 }
 
 .backdrop-form-approval a {
