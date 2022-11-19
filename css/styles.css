@@ -819,6 +819,14 @@ a {
 	border-width: 1px;
 	border-style: solid;
 	border-color: rgba(0, 0, 0, 0.1);
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-modal-batton:hover,
+.backdrop-modal-batton:focus {
+	fill: var(--target-blue)
 }
 
 .backdrop-form {
@@ -868,47 +876,47 @@ a {
 	border-style: solid;
 	border-color: rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
+	outline: transparent;
 }
 
 .form-input:focus {
 	border-color: var(--target-blue);
+	fill: var(--target-blue);
 	border-radius: 4px;
 }
 
-.backdrop-form-p {
+.backdrop-form-label {
 	margin-bottom: 4px;
 
 	color: var(--text-grey);
 }
 
-.backdrop-form-name {
-	position: relative;
-}
-
-.form-input-name-svg {
+.form-input-svg {
 	position: absolute;
 	left: 15px;
-	bottom: 24px;
+	bottom: 21px;
+}
+
+	.form-input:focus + .form-input-svg {
+		fill: var(--target-blue);
+	}
+
+.backdrop-form-name {
+	position: relative;
+	 display: flex;
+	 flex-direction: column;
 }
 
 .backdrop-form-fone {
 	position: relative;
-}
-
-.form-input-fone-cvg {
-	position: absolute;
-	left: 15px;
-	bottom: 24px;
+	display: flex;
+	flex-direction: column;
 }
 
 .backdrop-form-mile {
 	position: relative;
-}
-
-.form-input-mile-svg {
-	position: absolute;
-	left: 15px;
-	bottom: 21px;
+	display: flex;
+	flex-direction: column;
 }
 
 .backdrop-form-coment {
@@ -930,22 +938,19 @@ a {
 	border-radius: 4px;
 }
 
-.backdrop-form-coment svg {
-	position: absolute;
-}
-
 .backdrop-form-approval {
 	margin-bottom: 30px;
 
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 .backdrop-form-approval input {
 	margin-right: 8px;
 }
 
-.backdrop-form-approval p {
+.form-approval-appruv {
 	margin-right: 5px;
 
 	color: var(--text-grey);
