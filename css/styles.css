@@ -236,10 +236,6 @@ a {
 	justify-content: space-between;
 }
 
-.footer-container-nav {
-	margin-right: 70px;
-}
-
 .footer-address {
 	margin-top: 20px;
 }
@@ -728,6 +724,8 @@ a {
 .portfolio-cart-text {
 	font-size: 16px;
 	line-height: 1.87;
+
+	color: var(--text-grey);
 }
 
 .portfolio-cart-modal {
@@ -780,13 +778,13 @@ a {
 
 .backdrop-modal {
 	position: absolute;
-	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
 	width: 528px;
 	height: 581px;
+	padding: 40px;
 
 	border-radius: 4px;
 	background-color: var(--color-maxwite);
@@ -823,14 +821,10 @@ a {
 }
 
 .backdrop-form {
-	padding-top: 40px;
-	display: flex;
-	flex-direction: column;
-	justify-items: center;
 	align-items: center;
 }
 
-.backdrop-form h2 {
+.backdrop-form p {
 	margin-bottom: 12px;
 
 	font-weight: 700;
@@ -845,6 +839,7 @@ a {
 .backdrop-form button {
 	width: 200px;
 	height: 50px;
+	margin: auto;
 
 	font-weight: 700;
 	font-size: 16px;
@@ -858,9 +853,7 @@ a {
 }
 
 .form-input {
-	margin-bottom: 10px;
-
-	width: 448px;
+	width: 100%;
 	height: 40px;
 
 	padding-left: 42px;
@@ -884,13 +877,16 @@ a {
 .backdrop-form-label {
 	margin-bottom: 4px;
 
+	font-size: 12px;
+	line-height: 14px;
+	letter-spacing: 0.01em;
 	color: var(--text-grey);
 }
 
 .form-input-svg {
 	position: absolute;
 	left: 15px;
-	bottom: 21px;
+	top: 50%;
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -901,18 +897,24 @@ a {
 }
 
 .backdrop-form-name {
+	margin-bottom: 10px;
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
 }
 
 .backdrop-form-fone {
+	margin-bottom: 10px;
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
 }
 
 .backdrop-form-mile {
+	margin-bottom: 10px;
+
 	position: relative;
 	display: flex;
 	flex-direction: column;
