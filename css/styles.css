@@ -920,6 +920,13 @@ a {
 	flex-direction: column;
 }
 
+.backdrop-form-coment {
+	margin-bottom: 10px;
+
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
 
 .backdrop-form-textarea {
 	margin-bottom: 20px;
