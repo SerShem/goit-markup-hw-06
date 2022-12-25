@@ -661,11 +661,6 @@ a {
 	margin-bottom: 0px;
 }
 
-.portfolio-cart {
-	padding: 24px 20px;
-	border: 1px solid var(--section-witegrey);
-}
-
 .portfolio-button {
 	padding: 6px 26px;
 
@@ -689,6 +684,11 @@ a {
 	background: var(--target-blue);
 	color: var(--color-maxwite);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-cart {
+	padding: 24px 20px;
+	border: 1px solid var(--section-witegrey);
 }
 
 .portfolio-cart-link {
